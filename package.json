@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.kunkun.sh",
+  "name": "kunkun-ext-fancy-text",
+  "version": "0.0.5",
+  "license": "MIT",
+  "type": "module",
+  "kunkun": {
+    "name": "Fancy Text",
+    "shortDescription": "Convert your normal text to fancy text",
+    "longDescription": "Convert your normal text to fancy text",
+    "identifier": "fancy-text",
+    "permissions": [
+      "clipboard:write-text"
+    ],
+    "demoImages": [],
+    "icon": {
+      "type": "iconify",
+      "value": "la:pen-fancy"
+    },
+    "customUiCmds": [],
+    "templateUiCmds": [
+      {
+        "name": "Fancy Text",
+        "main": "dist/index.js",
+        "cmds": []
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "bun build.ts dev",
+    "build": "bun build.ts"
+  },
+  "dependencies": {
+    "@kksh/api": "0.0.53",
+    "i18next": "^23.15.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "./dist",
+    ".gitignore"
+  ]
+}
